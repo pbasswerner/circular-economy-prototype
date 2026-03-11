@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@700;800&display=swap');
+
+/* ─── City of Boston Design System Tokens ─── */
+:root {
+  --color-freedom-trail-red:  #FB4D42;
+  --color-charles-blue:       #091F2F;
+  --color-optimistic-blue:    #288BE4;
+  --color-snow-white:         #FFFFFF;
+
+  --color-gray-dark:          #1B2A35;
+  --color-gray-mid:           #53687A;
+  --color-gray-light:         #E0E5EA;
+  --color-gray-bg:            #F2F4F6;
+
+  --color-text-primary:       var(--color-charles-blue);
+  --color-text-secondary:     var(--color-gray-mid);
+  --color-accent:             var(--color-freedom-trail-red);
+  --color-action:             var(--color-optimistic-blue);
+  --color-bg:                 var(--color-snow-white);
+  --color-bg-subtle:          var(--color-gray-bg);
+  --color-border:             var(--color-gray-light);
+
+  --font-display: 'Montserrat', sans-serif;
+  --font-body:    'Lora', serif;
+
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  --shadow-card: 0 2px 8px rgba(9,31,47,0.10), 0 1px 2px rgba(9,31,47,0.06);
+  --shadow-hover: 0 8px 24px rgba(9,31,47,0.16), 0 2px 8px rgba(9,31,47,0.08);
+
+  --transition: 180ms ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  color: var(--color-charles-blue);
+}
+
+a { color: var(--color-action); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
