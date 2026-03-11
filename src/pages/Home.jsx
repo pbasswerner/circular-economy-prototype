@@ -9,15 +9,17 @@ export default function Home() {
       <section style={{
         background: 'var(--color-charles-blue)',
         padding: 'var(--space-2xl) 0 var(--space-xl)',
-        position: 'relative',
-        overflow: 'hidden',
       }}>
-        {/* Red accent stripe */}
-        <div style={{
-          position: 'absolute', left: 0, top: 0, bottom: 0,
-          width: 6, background: 'var(--color-freedom-trail-red)',
-        }} />
         <div className="container">
+          <button onClick={() => navigate('/')} style={{
+            background: 'none', border: 'none', cursor: 'pointer',
+            fontFamily: 'var(--font-display)', fontWeight: 700,
+            fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.1em',
+            color: 'rgba(255,255,255,0.5)',
+            display: 'flex', alignItems: 'center', gap: 6,
+            marginBottom: 'var(--space-lg)',
+            padding: 0,
+          }}>← Back to brief</button>
           <div style={{ maxWidth: 620 }}>
             <p style={{
               fontFamily: 'var(--font-display)',

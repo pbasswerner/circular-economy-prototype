@@ -62,7 +62,7 @@ export default function FlowA() {
       <div className="container">
 
         {/* Back link */}
-        <button onClick={() => navigate('/')} style={{
+        <button onClick={() => navigate('/prototype')} style={{
           background: 'none', border: 'none', cursor: 'pointer',
           fontFamily: 'var(--font-display)',
           fontWeight: 700,
