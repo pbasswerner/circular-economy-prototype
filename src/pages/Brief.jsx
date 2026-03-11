@@ -212,18 +212,13 @@ export default function Brief() {
               { metric: 'Geographic distribution of searches', why: 'Identifies equity gaps by neighborhood' },
               { metric: 'Year-1 partner services listed', why: 'Shows ecosystem coverage' },
             ].map((row, i) => (
-              <div key={i} style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                borderBottom: i < 3 ? '1px solid var(--color-border)' : 'none',
-                background: i % 2 === 0 ? 'var(--color-snow-white)' : 'var(--color-gray-bg)',
-              }}>
-                <div style={{ padding: '12px 16px', borderRight: '1px solid var(--color-border)' }}>
-                  {i === 0 && <p style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-gray-mid)', marginBottom: 6 }}>Metric</p>}
+              <div key={i} className="metric-row">
+                <div className="metric-cell">
+                  <p style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-gray-mid)', marginBottom: 6 }}>Metric</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-text-primary)' }}>{row.metric}</p>
                 </div>
-                <div style={{ padding: '12px 16px' }}>
-                  {i === 0 && <p style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-gray-mid)', marginBottom: 6 }}>Why It Matters</p>}
+                <div className="metric-cell">
+                  <p style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--color-gray-mid)', marginBottom: 6 }}>Why It Matters</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--color-text-secondary)' }}>{row.why}</p>
                 </div>
               </div>
@@ -473,6 +468,7 @@ export default function Brief() {
             </p>
             <button
               onClick={() => navigate('/prototype')}
+              className="btn-mobile-full"
               style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 800,

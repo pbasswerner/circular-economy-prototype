@@ -14,7 +14,7 @@ export function SiteHeader({ onHome }) {
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '20px', color: 'white', lineHeight: 1, paddingBottom: '2px' }}>B</span>
           </div>
           <div style={{ textAlign: 'left' }}>
-            <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-gray-light)', lineHeight: 1 }}>City of Boston</div>
+            <div className="header-subtitle" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--color-gray-light)', lineHeight: 1 }}>City of Boston</div>
             <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '15px', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--color-snow-white)', lineHeight: 1.2 }}>Circular Economy Tool</div>
           </div>
         </button>
@@ -41,7 +41,7 @@ export function ProgressBar({ steps, current }) {
                     : <span style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '11px', color: active ? 'white' : 'var(--color-gray-mid)' }}>{i + 1}</span>
                   }
                 </div>
-                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.08em', color: active ? 'var(--color-charles-blue)' : done ? 'var(--color-optimistic-blue)' : 'var(--color-gray-mid)', marginTop: 4, textAlign: 'center', maxWidth: 72, lineHeight: 1.2 }}>{label}</span>
+                <span className="step-label" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.08em', color: active ? 'var(--color-charles-blue)' : done ? 'var(--color-optimistic-blue)' : 'var(--color-gray-mid)', marginTop: 4, textAlign: 'center', maxWidth: 72, lineHeight: 1.2 }}>{label}</span>
               </div>
               {i < steps.length - 1 && (
                 <div style={{ height: 2, flex: 0.4, background: done ? 'var(--color-optimistic-blue)' : 'var(--color-gray-light)', marginBottom: 22, transition: 'background var(--transition)' }} />
@@ -62,7 +62,7 @@ export function Button({ children, onClick, variant = 'primary', disabled = fals
     accent:  { background: 'var(--color-freedom-trail-red)', color: 'var(--color-snow-white)' },
     outline: { background: 'transparent', color: 'var(--color-charles-blue)', border: '2px solid var(--color-charles-blue)' },
   }
-  return <button onClick={disabled ? undefined : onClick} style={{ ...base, ...variants[variant], ...extra }}>{icon && <span style={{ display: 'flex' }}>{icon}</span>}{children}</button>
+  return <button onClick={disabled ? undefined : onClick} className={variant === 'primary' || variant === 'accent' ? 'btn-mobile-full' : ''} style={{ ...base, ...variants[variant], ...extra }}>{icon && <span style={{ display: 'flex' }}>{icon}</span>}{children}</button>
 }
 
 /* ─── Tag ─── */
